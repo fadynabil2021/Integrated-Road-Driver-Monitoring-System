@@ -9,6 +9,10 @@ This project provides a modular, deep learning-based pipeline for head pose and 
 - `models/` — Model architectures
 - `training/` — Training utilities
 - `Best_Model/` — Pretrained model weights
+  - `Pytorch/`
+    - `best_model_train_val_1_2_3_4_5_6_7_8_9_10_12_13_14_17_18_test_15_19_20_mobilenet_v2.pth`: Best model checkpoint in PyTorch format for evaluation or inference.
+  - `Tensorrt/`
+    - `mobilenet_v2_head_gaze_trt.pth`: Best model checkpoint converted to TensorRT format for optimized inference.
 - `main.py` — Entry point for running the pipeline
 - `pipeline.py` — Pipeline orchestration script
 - `run_ai_stack.sh` — Shell script to run the entire AI stack
@@ -72,7 +76,7 @@ For more information about the dataset, visit [AutoPOSE Dataset Website](http://
    ```bash
    python3 -m main
    ```
-4. Pretrained weights are available in the `Best_Model/` directory.
+4. Pretrained weights are available in the `Best_Model/` directory, with both PyTorch and TensorRT versions provided for flexible deployment.
 
 ## Contributing
 Contributions are welcome! Please open an issue or submit a pull request for improvements, bug fixes, or new features.
@@ -84,3 +88,6 @@ For questions, collaborations, or support, please contact:
 
 ## License
 This project is released under an open-source license. Please see the LICENSE file for details (add a LICENSE file if not present).
+
+## Acknowledgements
+If you use this code or the AutoPOSE dataset, please cite the original paper as shown above. 
