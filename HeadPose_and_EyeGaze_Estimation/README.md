@@ -80,7 +80,7 @@ For more information about the dataset, visit [AutoPOSE Dataset Website](http://
 
 ## Results
 
-### Evaluation Results
+#### Evaluation Results
 - **Inference Time:** Achieved ~32 ms per image (31 FPS), exceeding the 30 FPS real-time threshold, confirming suitability for Jetson deployment.
 
 #### Head Pose Metrics
