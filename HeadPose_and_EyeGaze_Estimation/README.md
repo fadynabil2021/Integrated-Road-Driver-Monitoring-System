@@ -44,7 +44,7 @@ This project provides a modular, deep learning-based pipeline for head pose and 
   - `losses.py`: Custom loss functions for training.
   - `__init__.py`: Marks the training module.
 - `Best_Model/`
-  - `best_model_train_val_1_2_3_4_5_6_7_8_9_10_12_13_14_17_18_test_15_19_20_mobilenet_v2.pth`: Pretrained model checkpoint for quick evaluation or inference.
+  - `best_model_train_val_1_2_3_4_5_6_7_8_9_10_12_13_14_17_18_test_15_19_20_mobilenet_v2.pth` and `mobilenet_v2_head_gaze_trt.pth`: Pretrained model checkpoint for quick evaluation or inference.
 
 ## Dataset: AutoPOSE
 This project leverages the AutoPOSE dataset, a large-scale automotive driver head pose and gaze dataset. AutoPOSE provides high-quality, annotated images of drivers in real vehicles, enabling robust training and evaluation of head pose and gaze estimation models. The dataset includes a deep head orientation baseline and is designed to support research in driver monitoring and safety systems.
