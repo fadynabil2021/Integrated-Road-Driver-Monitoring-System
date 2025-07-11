@@ -118,7 +118,7 @@ For questions, collaborations, or support, please contact:
 - **Email:** fadynabilfadymofeed@gmail.com
 
 ## License
-This project is released under an open-source license. Please see the LICENSE file for details (add a LICENSE file if not present).
+This project is released under an open-source license.
 
 ## Acknowledgements
 If you use this code or the AutoPOSE dataset, please cite the original paper as shown above. 
