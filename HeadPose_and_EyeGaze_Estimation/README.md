@@ -78,20 +78,6 @@ For more information about the dataset, visit [AutoPOSE Dataset Website](http://
    ```
 4. Pretrained weights are available in the `Best_Model/` directory, with both PyTorch and TensorRT versions provided for flexible deployment.
 
-## Contributing
-Contributions are welcome! Please open an issue or submit a pull request for improvements, bug fixes, or new features.
-
-## Contact
-For questions, collaborations, or support, please contact:
-- **LinkedIn:** [Fady Nabil Mofeed](https://www.linkedin.com/in/fadynabilmofeed/)
-- **Email:** fadynabilfadymofeed@gmail.com
-
-## License
-This project is released under an open-source license. Please see the LICENSE file for details (add a LICENSE file if not present).
-
-## Acknowledgements
-If you use this code or the AutoPOSE dataset, please cite the original paper as shown above. 
-
 ## Results
 
 ### Evaluation Results
@@ -121,4 +107,20 @@ If you use this code or the AutoPOSE dataset, please cite the original paper as 
 - **Accuracy and Consistency:** The model exceeds MAE (<10°), STD (<7°), and RMSE (<10°) goals for both head pose and gaze, with BMAE (<15°) confirming robustness across angle ranges. High accuracy at 10° thresholds (e.g., 91.3% for roll) supports reliable attention detection.
 - **Pitch Variability:** Pitch STD (7.34° from error charts) slightly exceeds 7°, indicating potential challenges with extreme vertical tilts, possibly due to dataset bias or camera perspective issues.
 - **Gaze Challenges:** Gaze estimation (MAE 7.8°) is closer to the 10° limit, reflecting the difficulty of detecting subtle eye movements with limited valid samples (62.3% in test set).
-- **Real-Time Performance:** 31 FPS ensures practical deployment, with TensorRT optimization proving effective for embedded systems. 
+- **Real-Time Performance:** 31 FPS ensures practical deployment, with TensorRT optimization proving effective for embedded systems.
+
+## Contributing
+Contributions are welcome! Please open an issue or submit a pull request for improvements, bug fixes, or new features.
+
+## Contact
+For questions, collaborations, or support, please contact:
+- **LinkedIn:** [Fady Nabil Mofeed](https://www.linkedin.com/in/fadynabilmofeed/)
+- **Email:** fadynabilfadymofeed@gmail.com
+
+## License
+This project is released under an open-source license. Please see the LICENSE file for details (add a LICENSE file if not present).
+
+## Acknowledgements
+If you use this code or the AutoPOSE dataset, please cite the original paper as shown above. 
+
+ 
