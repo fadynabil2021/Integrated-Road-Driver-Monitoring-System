@@ -1,6 +1,6 @@
 # HeadPose_and_EyeGaze_Estimation
 
-[🎥 Watch the video](./Fady%20(1).mp4)
+![Demo](./Fady.gif)
 
 ## Overview
 This project provides a modular, deep learning-based pipeline for head pose and eye gaze estimation, designed for automotive driver monitoring applications. It supports data augmentation, custom loss functions, advanced model architectures, and streamlined training and evaluation workflows.
