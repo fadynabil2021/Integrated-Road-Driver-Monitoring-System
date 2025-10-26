@@ -10,8 +10,19 @@ from PIL import Image, ImageDraw
 
 from src.core import YAMLConfig
 
+clss = ['barrier',
+'bicycle',
+'bus',
+'car',
+'construction_vehicle',
+'motorcycle',
+'pedestrian',
+'pedestrian',
+'traffic_cone',
+'trailer',
+'truck']
 
-def draw(images, labels, boxes, scores, thrh = 0.6):
+def draw(images, labels, boxes, scores, out_image, thrh = 0.6):
     for i, im in enumerate(images):
         draw = ImageDraw.Draw(im)
 
@@ -22,9 +33,9 @@ def draw(images, labels, boxes, scores, thrh = 0.6):
 
         for j,b in enumerate(box):
             draw.rectangle(list(b), outline='red',)
-            draw.text((b[0], b[1]), text=f"{lab[j].item()} {round(scrs[j].item(),2)}", fill='blue', )
+            draw.text((b[0], b[1]), text=f"{clss[lab[j].item()]} {round(scrs[j].item(),2)}", fill='blue', )
 
-        im.save(f'results_{i}.jpg')
+        im.save(out_image)
 
 
 def main(args, ):
@@ -67,10 +78,20 @@ def main(args, ):
     ])
     im_data = transforms(im_pil)[None].to(args.device)
 
+    from time import time
     output = model(im_data, orig_size)
+    output = model(im_data, orig_size)
+    output = model(im_data, orig_size)
+
+    start = time()
+    for i in range(10):
+        output = model(im_data, orig_size)
+    end = time()
+    print(f"Time taken torch: {(end - start) / 10 * 1000}ms")
+
     labels, boxes, scores = output
 
-    draw([im_pil], labels, boxes, scores)
+    draw([im_pil], labels, boxes, scores, args.img_out)
 
 
 if __name__ == '__main__':
@@ -80,5 +101,6 @@ if __name__ == '__main__':
     parser.add_argument('-r', '--resume', type=str, )
     parser.add_argument('-f', '--im-file', type=str, )
     parser.add_argument('-d', '--device', type=str, default='cpu')
+    parser.add_argument('-o', '--img-out', type=str, default='result.jpg')
     args = parser.parse_args()
     main(args)
